@@ -33,10 +33,27 @@ public class Hogwarts {
         this.distanceTransgration = distanceTransgration;
     }
 
+    public void equalToHogwarts(Hogwarts student) {
+        if (this.getPower() > student.getPower()) {
+            System.out.println("win");
+        } else if (this.getPower() > student.getPower()) {
+            System.out.println("lose");
+        } else {
+            System.out.println("nichya");
+        }
+
+    }
+
+    public int getPower() {
+        return this.getDistanceTransgration() + this.getPowerStudent();
+    }
+
     @Override
     public String toString() {
         return "Факультет " +
                 ", имя" + nameStudent + '\'' +
                 ", сила колдовства" + powerStudent + ", расстояние трансгрессии=" + distanceTransgration;
     }
+
+
 }
