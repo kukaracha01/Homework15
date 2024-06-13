@@ -34,10 +34,30 @@ public class Grifindor extends Hogwarts {
     public void setCourage(int courage) {
         this.courage = courage;
     }
+    public void equalToGrifindor(Grifindor student) {
+        if (this.getPower() > student.getPower()) {
+            System.out.println("win");
+        } else if (this.getPower() < student.getPower()) {
+            System.out.println("lose");
+        } else {
+            System.out.println("nichya");
+        }
+
+    }
+
+    public int getPower() {
+        return this.getDistanceTransgration() + this.getPowerStudent() + this.getNobility() + this.getHonor() + this.getCourage();
+    }
 
     @Override
     public String toString() {
         return "Grifindor{" +
+                " " +
+                getNameStudent() +
+                " " +
+                getPowerStudent() +
+                " " +
+                getDistanceTransgration() +
                 "nobility=" + nobility +
                 ", honor=" + honor +
                 ", courage=" + courage +

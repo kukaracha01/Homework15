@@ -5,8 +5,16 @@ public class Hogwarts {
 
     public Hogwarts(String nameStudent, int powerStudent, int distanceTransgration) {
         this.nameStudent = nameStudent;
-        this.powerStudent = powerStudent;
-        this.distanceTransgration = distanceTransgration;
+        if (this.powerStudent < 0 && this.powerStudent > 100) {
+            throw new IllegalArgumentException("не правильно");
+        } else {
+            this.powerStudent = powerStudent;
+        }
+        if (this.distanceTransgration <= 100 && this.distanceTransgration >= 0) {
+            this.distanceTransgration = distanceTransgration;
+        } else {
+            throw new IllegalArgumentException("не правильно");
+        }
     }
 
     public String getNameStudent() {
@@ -33,10 +41,27 @@ public class Hogwarts {
         this.distanceTransgration = distanceTransgration;
     }
 
+    public void equalToHogwarts(Hogwarts student) {
+        if (this.getPower() > student.getPower()) {
+            System.out.println("win");
+        } else if (this.getPower() < student.getPower()) {
+            System.out.println("lose");
+        } else {
+            System.out.println("nichya");
+        }
+
+    }
+
+    public int getPower() {
+        return this.getDistanceTransgration() + this.getPowerStudent();
+    }
+
     @Override
     public String toString() {
         return "Факультет " +
                 ", имя" + nameStudent + '\'' +
                 ", сила колдовства" + powerStudent + ", расстояние трансгрессии=" + distanceTransgration;
     }
+
+
 }
