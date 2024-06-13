@@ -38,7 +38,7 @@ public class Main {
                 new Cogtevran("Маркус Белби", 60, 45, 65, 55, 60, 70)
         };
 
-        System.out.println(hogwarts[0]);;
+        System.out.println(hogwarts[0]);
 
         hogwarts[0].equalToHogwarts(hogwarts[1]);
         grifindor[0].equalToGrifindor(grifindor[1]);

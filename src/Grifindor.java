@@ -37,7 +37,7 @@ public class Grifindor extends Hogwarts {
     public void equalToGrifindor(Grifindor student) {
         if (this.getPower() > student.getPower()) {
             System.out.println("win");
-        } else if (this.getPower() > student.getPower()) {
+        } else if (this.getPower() < student.getPower()) {
             System.out.println("lose");
         } else {
             System.out.println("nichya");
