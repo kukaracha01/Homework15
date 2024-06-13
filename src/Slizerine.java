@@ -54,10 +54,30 @@ public class Slizerine extends Hogwarts {
     public void setThirstForPower(int thirstForPower) {
         this.thirstForPower = thirstForPower;
     }
+    public void equalToSlizerine(Slizerine student) {
+        if (this.getPower() > student.getPower()) {
+            System.out.println("win");
+        } else if (this.getPower() > student.getPower()) {
+            System.out.println("lose");
+        } else {
+            System.out.println("nichya");
+        }
+
+    }
+
+    public int getPower() {
+        return this.getDistanceTransgration() + this.getPowerStudent() + this.getThirstForPower() + this.getResourcefulness() + this.getAmbition() + this.getDetermination() + this.getCunning();
+    }
 
     @Override
     public String toString() {
         return "Slizerine{" +
+                " " +
+                getNameStudent() +
+                " " +
+                getPowerStudent() +
+                " " +
+                getDistanceTransgration() +
                 "cunning=" + cunning +
                 ", determination=" + determination +
                 ", ambition=" + ambition +

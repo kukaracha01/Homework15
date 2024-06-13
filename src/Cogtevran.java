@@ -44,10 +44,30 @@ public class Cogtevran extends Hogwarts {
     public void setCreativity(int creativity) {
         this.creativity = creativity;
     }
+    public void equalToCogtevran(Cogtevran student) {
+        if (this.getPower() > student.getPower()) {
+            System.out.println("win");
+        } else if (this.getPower() > student.getPower()) {
+            System.out.println("lose");
+        } else {
+            System.out.println("nichya");
+        }
+
+    }
+
+    public int getPower() {
+        return this.getDistanceTransgration() + this.getPowerStudent() + this.getWit() + this.getWisdom() + this.getCreativity() + this.getIntelligence();
+    }
 
     @Override
     public String toString() {
         return "Cogtevran{" +
+                " " +
+                getNameStudent() +
+                " " +
+                getPowerStudent() +
+                " " +
+                getDistanceTransgration() +
                 "intelligence=" + intelligence +
                 ", wisdom=" + wisdom +
                 ", wit=" + wit +
